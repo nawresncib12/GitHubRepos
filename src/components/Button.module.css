@@ -1,0 +1,42 @@
+@import './Layout.module.css';
+.btn {
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.btn:hover {
+    cursor: pointer;
+    animation: tilt 0.5s 2;
+}
+
+@keyframes tilt {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(6deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-6deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.btn.primary {
+    background-color: var(--color-primary);
+    color: #fff;
+    border: none;
+}
+
+.btn.secondary {
+    background-color: #fff;
+    color: var(--color-primary);
+    border: var(--color-primary) 1px solid;
+}

@@ -1,8 +1,13 @@
-import Navbar from "../components/Navbar";
+import HeroDescription from "../components/Home/HeroDescription";
+import HeroImage from "../components/Home/HeroImage";
+import classes from "./Home.module.css"
 const Home = () => {
-  return <div>
-    <Navbar></Navbar>
-  </div>;
+  return (
+    <div className="grid-2">
+      <HeroDescription></HeroDescription>
+      <HeroImage></HeroImage>
+    </div>
+  );
 };
 
 export default Home;

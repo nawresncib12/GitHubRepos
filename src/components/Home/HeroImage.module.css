@@ -1,0 +1,29 @@
+.heroImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.sleep,
+.awake {
+    transition: opacity 300ms ease-in-out;
+    opacity: 1;
+    transform-origin: center;
+}
+
+.hidden {
+    opacity: 0;
+    transform-origin: center;
+}
+
+svg:hover .sleep {
+    opacity: 0;
+    transform-origin: center;
+}
+
+svg:hover .awake {
+    transition: opacity 300ms ease-in-out;
+    opacity: 1;
+    transform-origin: center;
+}

@@ -8,6 +8,7 @@
     min-height: 100vh;
     min-width: 100vw;
     cursor: pointer;
+    z-index: 7;
 }
 
 .navbar span {

@@ -2,3 +2,50 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+.row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.grid-2 {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flipped {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.sm {
+    display: none;
+}
+
+.lg {
+    display: block;
+}
+
+@media only screen and (max-width: 1000px) {
+    .sm {
+        display: block;
+    }
+    .lg {
+        display: none;
+    }
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+}

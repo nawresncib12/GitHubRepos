@@ -8,17 +8,19 @@ const Navbar = () => {
       {navbar === "open" && <NavbarMenu setNavbar={setNavbar}></NavbarMenu>}
       <div className={classes.navbar}>
         <h1 className={classes.title}>
-          <div className={classes.background}></div>
-          GitHub Repos</h1>
-        <div className={classes.links}>
+          <div className={classes.background + " lg"}></div>
+          GitHub Repos
+        </h1>
+        <div className={classes.links + " lg"}>
           <a href="/">Home</a>
           <a href="/">Search</a>
           <a href="/">Documentation</a>
         </div>
-        <div className={classes.mobile}>
+        <div className="sm">
           <div
             onClick={() => {
               setNavbar("loading");
+              document.body.style.overflow = "hidden";
               setTimeout(() => {
                 setNavbar("open");
               }, 400);
