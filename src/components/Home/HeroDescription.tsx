@@ -1,5 +1,5 @@
 import classes from "./HeroDescription.module.css";
-import Button from "../Button";
+import Button from "../shared/Button";
 const HeroDescription = () => {
   return (
     <div className={classes.heroDescription + " flex-1"}>

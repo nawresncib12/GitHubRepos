@@ -8,7 +8,7 @@ const Button = (props: ButtonProps) => {
   return (
     <button
       className={`${classes.btn} ${
-        props.type == "primary" ? classes.primary : classes.secondary
+        props.type === "primary" ? classes.primary : classes.secondary
       }`}
     >
       {props.text}

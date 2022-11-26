@@ -1,6 +1,6 @@
 import classes from "./ModeSwitch.module.css";
-import Light from "../assets/Light";
-import Night from "../assets/Night";
+import Light from "../../assets/Light";
+import Night from "../../assets/Night";
 
 const ModeSwitch = ({ changeMode, lightMode }: any) => {
   return (

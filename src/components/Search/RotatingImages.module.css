@@ -1,0 +1,220 @@
+:root {
+    --user-size: 100px;
+}
+
+@media screen and (max-width:600px) {
+     :root {
+        --user-size: 50px;
+    }
+}
+
+@media screen and (max-height:600px) {
+     :root {
+        --user-size: 50px;
+    }
+}
+
+.rotatingImages {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 100px);
+    z-index: -10;
+}
+
+.circle {
+    position: relative;
+}
+
+.element {
+    display: block;
+    position: absolute;
+    width: var( --user-size);
+    height: var( --user-size);
+    opacity: 1;
+    transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+}
+
+.element.hide {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.pos1 {
+    top: calc(50% - calc(var(--user-size) / 2));
+    left: calc(100% - var( --user-size));
+    animation: rotate1 20s infinite;
+}
+
+.pos2 {
+    top: calc(75%);
+    left: calc(75%);
+    animation: rotate2 20s infinite;
+}
+
+.pos3 {
+    top: calc(100% - var( --user-size));
+    left: calc(50% - calc(var(--user-size) / 2));
+    animation: rotate3 20s infinite;
+}
+
+.pos4 {
+    top: calc(75%);
+    left: calc(25% - var( --user-size));
+    animation: rotate4 20s infinite;
+}
+
+.pos5 {
+    top: calc(50% - calc(var(--user-size) / 2));
+    left: 0%;
+    animation: rotate5 20s infinite;
+}
+
+@keyframes rotate1 {
+    0% {
+        top: calc(50% - calc(var(--user-size) / 2));
+        left: calc(100% - var( --user-size));
+    }
+    25% {
+        top: calc(75%);
+        left: calc(75%);
+    }
+    50% {
+        top: calc(100% - var( --user-size));
+        left: calc(50% - calc(var(--user-size) / 2));
+    }
+    75% {
+        top: calc(75%);
+        left: calc(25% - var( --user-size));
+    }
+    100% {
+        top: calc(50% - calc(var(--user-size) / 2));
+        left: 0%;
+    }
+}
+
+@keyframes rotate2 {
+    0% {
+        top: calc(75%);
+        left: calc(75%);
+    }
+    25% {
+        top: calc(100% - var( --user-size));
+        left: calc(50% - calc(var(--user-size) / 2));
+    }
+    50% {
+        top: calc(75%);
+        left: calc(25% - var( --user-size));
+    }
+    75% {
+        top: calc(50% - calc(var(--user-size) / 2));
+        left: 0%;
+    }
+    81.25% {
+        top: -100vh;
+        left: -100vw;
+    }
+    87.5% {
+        top: -100vh;
+        left: 150vw;
+    }
+    100% {
+        top: calc(50% - calc(var(--user-size) / 2));
+        left: calc(100% - var( --user-size));
+    }
+}
+
+@keyframes rotate3 {
+    0% {
+        top: calc(100% - var( --user-size));
+        left: calc(50% - calc(var(--user-size) / 2));
+    }
+    25% {
+        top: calc(75%);
+        left: calc(25% - var( --user-size));
+    }
+    50% {
+        top: calc(50% - calc(var(--user-size) / 2));
+        left: 0%;
+    }
+    56.25% {
+        top: -100vh;
+        left: -100vw;
+    }
+    62.5% {
+        top: -100vh;
+        left: 150vw;
+    }
+    75% {
+        top: calc(50% - calc(var(--user-size) / 2));
+        left: calc(100% - var( --user-size));
+    }
+    100% {
+        top: calc(75%);
+        left: calc(75%);
+    }
+}
+
+@keyframes rotate4 {
+    0% {
+        top: calc(75%);
+        left: calc(25% - var( --user-size));
+    }
+    25% {
+        top: calc(50% - calc(var(--user-size) / 2));
+        left: 0%;
+    }
+    31.25% {
+        top: -100vh;
+        left: -100vw;
+    }
+    37.5% {
+        top: -100vh;
+        left: 150vw;
+    }
+    50% {
+        top: calc(50% - calc(var(--user-size) / 2));
+        left: calc(100% - var( --user-size));
+    }
+    75% {
+        top: calc(75%);
+        left: calc(75%);
+    }
+    100% {
+        top: calc(100% - var( --user-size));
+        left: calc(50% - calc(var(--user-size) / 2));
+    }
+}
+
+@keyframes rotate5 {
+    0% {
+        top: calc(50% - calc(var(--user-size) / 2));
+        left: 0%;
+    }
+    6.25% {
+        top: -100vh;
+        left: -100vw;
+    }
+    12.5% {
+        top: -100vh;
+        left: 150vw;
+    }
+    25% {
+        top: calc(50% - calc(var(--user-size) / 2));
+        left: calc(100% - var( --user-size));
+    }
+    50% {
+        top: calc(75%);
+        left: calc(75%);
+    }
+    75% {
+        top: calc(100% - var( --user-size));
+        left: calc(50% - calc(var(--user-size) / 2));
+    }
+    100% {
+        top: calc(75%);
+        left: calc(25% - var( --user-size));
+    }
+}

@@ -10,7 +10,6 @@ const NavbarMenu = ({ setNavbar }: NavbarMenuProps) => {
         onClick={() => {
           setNavbar("closed");
           document.body.style.overflow = "auto";
-
         }}
       >
         x

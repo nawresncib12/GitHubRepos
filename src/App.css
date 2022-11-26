@@ -1,3 +1,4 @@
+@import url("./components//shared//Layout.module.css");
 a {
     text-decoration: none;
     color: inherit;
@@ -7,6 +8,10 @@ a {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+}
+
+.column {
+    flex-direction: column;
 }
 
 .grid-2 {
@@ -19,6 +24,10 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.center-text {
+    text-align: center;
 }
 
 .flex-1 {
@@ -36,6 +45,13 @@ a {
 
 .lg {
     display: block;
+}
+
+.heading-1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: calc(40px + 1vmin);
+    color: var(--color-text);
 }
 
 @media only screen and (max-width: 1000px) {

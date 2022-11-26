@@ -4,7 +4,11 @@ import { useState } from "react";
 const Navbar = () => {
   const [navbar, setNavbar] = useState("initial");
   return (
-    <div className={classes.navContainer}>
+    <div
+      className={`${classes.navContainer} ${
+        navbar === "loading" || navbar === "open" || navbar === "closed" ? "" : classes.open
+      }`}
+    >
       {navbar === "open" && <NavbarMenu setNavbar={setNavbar}></NavbarMenu>}
       <div className={classes.navbar}>
         <h1 className={classes.title}>
@@ -13,7 +17,7 @@ const Navbar = () => {
         </h1>
         <div className={classes.links + " lg"}>
           <a href="/">Home</a>
-          <a href="/">Search</a>
+          <a href="/user">Search</a>
           <a href="/">Documentation</a>
         </div>
         <div className="sm">

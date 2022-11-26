@@ -2,7 +2,7 @@
 .navContainer {
     display: flex;
     overflow: hidden;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     position: absolute;
     top: 0;
@@ -96,9 +96,6 @@
 }
 
 @media only screen and (max-width: 1000px) {
-    .navContainer {
-        width: 100vw;
-    }
     .navbar {
         padding: 20px 30px;
     }

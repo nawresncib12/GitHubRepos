@@ -1,9 +1,8 @@
-@import '../Layout.module.css';
+@import '../shared/Layout.module.css';
 .heroDescription {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    min-height: calc(100vh - 220px);
     justify-content: space-evenly;
     color: var(--color-text);
 }
