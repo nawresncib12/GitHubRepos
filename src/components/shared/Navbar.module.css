@@ -8,6 +8,7 @@
     top: 0;
     left: 0;
     color: var(--color-text);
+    pointer-events: none;
 }
 
 .navbar {
@@ -33,11 +34,13 @@
     font-weight: 700;
     margin: 0;
     color: #fff;
+    pointer-events: auto;
 }
 
 .links a {
     margin-left: 20px;
     font-weight: 700;
+    pointer-events: auto;
 }
 
 .navbar .outer {
@@ -49,6 +52,7 @@
     border: 1px solid #4078C0;
     display: flex;
     align-items: center;
+    pointer-events: auto;
 }
 
 .navbar .inner {
@@ -59,6 +63,7 @@
     cursor: pointer;
     position: relative;
     z-index: 6;
+    pointer-events: auto;
 }
 
 .navbar .outer .inner.opened {

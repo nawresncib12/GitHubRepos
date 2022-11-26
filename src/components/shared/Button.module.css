@@ -11,6 +11,11 @@
     animation: tilt 0.5s 2;
 }
 
+.btn:focus {
+    cursor: pointer;
+    animation: none;
+}
+
 @keyframes tilt {
     0% {
         transform: rotate(0deg);
@@ -39,4 +44,10 @@
     background-color: #fff;
     color: var(--color-primary);
     border: var(--color-primary) 1px solid;
+}
+
+.btn:disabled {
+    background-color: var(--color-gray);
+    animation: none;
+    cursor: auto
 }

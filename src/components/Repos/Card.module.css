@@ -1,0 +1,77 @@
+:root {
+    --deg: 3deg;
+}
+
+@import url("../shared/Layout.module.css");
+.card {
+    width: 300px;
+    height: 220px;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 30px;
+    border: 2px solid var(--color-gray);
+    cursor: pointer;
+    animation: tilting 7s ease-out infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: all 0.3s ease-in;
+}
+
+.card:hover {
+    border-color: var(--color-primary);
+    animation-play-state: paused;
+}
+
+.card .cardTitle {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.card .description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card .tags {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card .tags>p:first-child {
+    border: 1px solid var(--color-text);
+    padding: 10px;
+    border-radius: 10px;
+    text-transform: capitalize;
+}
+
+.card .icon {
+    color: var(--color-primary);
+    font-size: calc(15px + 1vmin);
+}
+
+.card h2 {
+    max-width: 250px;
+    color: var(--color-primary);
+    text-transform: capitalize;
+    overflow-wrap: break-word;
+}
+
+@keyframes tilting {
+    0% {
+        transform: rotate(var(--deg));
+    }
+    40% {
+        transform: rotate(-3deg);
+    }
+    70% {
+        transform: rotate(-1deg);
+    }
+    100% {
+        transform: rotate(var(--deg));
+    }
+}

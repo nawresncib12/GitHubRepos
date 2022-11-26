@@ -3,7 +3,8 @@
     --color-primary: #4078C0;
     --color-text: #fff;
     --color-opposite: #1E1E1E;
-    --color-gray: #4A4B4B
+    --color-gray: #4A4B4B;
+    color: #fff;
 }
 
 .light {
@@ -11,7 +12,8 @@
     --color-back: #fff;
     --color-primary: #4078C0;
     --color-opposite: #fff;
-    --color-gray: #F1F2F2
+    --color-gray: #F1F2F2;
+    color: #1E1E1E;
 }
 
 .content {
@@ -20,8 +22,6 @@
     align-items: center;
     margin-top: 100px;
     padding: 80px 80px 40px;
-    position: relative;
-    z-index: 5;
     min-height: calc(100vh - 220px);
 }
 

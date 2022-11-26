@@ -4,6 +4,10 @@ a {
     color: inherit;
 }
 
+p {
+    text-overflow: ellipsis;
+}
+
 .row {
     display: flex;
     gap: 20px;
@@ -51,7 +55,20 @@ a {
     margin: 0;
     font-weight: 700;
     font-size: calc(40px + 1vmin);
-    color: var(--color-text);
+}
+
+.heading-2 {
+    margin: 0;
+    font-weight: 700;
+    font-size: calc(25px + 1vmin);
+}
+
+.g-30 {
+    gap: 30px;
+}
+
+.description {
+    color: var(--color-gray);
 }
 
 @media only screen and (max-width: 1000px) {
