@@ -2,9 +2,10 @@
 .heroDescription {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    justify-content: space-evenly;
+    gap: 30px;
+    justify-content: space-between;
     color: var(--color-text);
+    min-height: 100%;
 }
 
 .heroDescription h1 {

@@ -51,19 +51,6 @@
     transition: all 0.5s;
 }
 
-.card h2::after {
-    content: '';
-    width: 0px;
-    height: 2px;
-    display: block;
-    background: var(--color-primary);
-    transition: 0.5s;
-}
-
-.card h2:hover::after {
-    width: 100%;
-}
-
 @keyframes tilting {
     0% {
         transform: rotate(var(--deg));

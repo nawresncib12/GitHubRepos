@@ -6,7 +6,9 @@ const Navbar = () => {
   return (
     <div
       className={`${classes.navContainer} ${
-        navbar === "loading" || navbar === "open" || navbar === "closed" ? "" : classes.open
+        navbar === "loading" || navbar === "open" || navbar === "closed"
+          ? ""
+          : classes.open
       }`}
     >
       {navbar === "open" && <NavbarMenu setNavbar={setNavbar}></NavbarMenu>}
@@ -15,10 +17,16 @@ const Navbar = () => {
           <div className={classes.background + " lg"}></div>
           GitHub Repos
         </h1>
-        <div className={classes.links + " lg"}>
-          <a href="/">Home</a>
-          <a href="/user">Search</a>
-          <a href="/">Documentation</a>
+        <div className={classes.links}>
+          <a className="underline" href="/">
+            Home
+          </a>
+          <a className="underline" href="/user">
+            Search
+          </a>
+          <a className="underline" href="/">
+            Documentation
+          </a>
         </div>
         <div className="sm">
           <div

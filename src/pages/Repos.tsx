@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Card from "../components/Repos/Card";
 import ReposService from "../services/Repos.service";
 import SearchBar from "../components/shared/SearchBar";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import RepoModel from "../models/RepoModel";
 import Loader from "../components/shared/Loader";
 const Repos = () => {
@@ -28,11 +28,14 @@ const Repos = () => {
     }
   };
   const handleSearch = async (value: any) => {
-    setFilteredRepos(
-      repos.filter((repo: RepoModel) => {
-        return repo.name.toLowerCase().includes(value.toLocaleLowerCase());
-      })
-    );
+    const result = repos.filter((repo: RepoModel) => {
+      return repo.name.toLowerCase().includes(value.toLocaleLowerCase());
+    });
+    if (result.length) {
+      setFilteredRepos(result);
+    } else {
+      toast.info("No repositories found");
+    }
   };
   useEffect(() => {
     getRepos();
@@ -40,6 +43,7 @@ const Repos = () => {
 
   return repos.length ? (
     <div>
+      <ToastContainer />
       <SearchBar
         style={{ minWidth: "40vw", marginBottom: "50px" }}
         onEnter={(value) => {

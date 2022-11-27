@@ -1,3 +1,4 @@
+@import url("./Layout.module.css");
 .mode {
     cursor: pointer;
     position: fixed;
@@ -14,11 +15,16 @@
     align-items: center;
     transition: transform 0.5s, background-color 0.5s;
     transform-origin: center;
-    background-color: #4078C0;
+    background-color: var(--color-primary);
 }
 
 .mode.dark {
     transform: rotate(-180deg);
     background-color: rgb(229, 225, 225);
     transform-origin: center;
+    color: var(--color-text);
+}
+
+.mode.dark svg {
+    transform: rotate(180deg);
 }

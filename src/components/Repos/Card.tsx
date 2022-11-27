@@ -28,10 +28,10 @@ const Card = ({ repo }: CardProps) => {
             <FontAwesomeIcon className={classes.icon} icon={faBookmark} />
             <div>
               <a href={repo.html_url}>
-                <h2 className="heading-2">{repo.name}</h2>
+                <h2 className="heading-2 underline">{repo.name}</h2>
               </a>
               <a href={repo.owner.html_url}>
-                <h2>{repo.owner.login}</h2>
+                <h2 className="underline">{repo.owner.login}</h2>
               </a>
             </div>
           </div>

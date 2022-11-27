@@ -10,14 +10,10 @@ const Serach = () => {
   const [fade, setFade] = useState(false);
 
   const handleSubmit = (value: any) => {
-    if (!value) {
-      toast.error("Please fill in user name");
-    } else {
-      setFade(true);
-      setTimeout(() => {
-        navigate(`/user/${value}`);
-      }, 1000);
-    }
+    setFade(true);
+    setTimeout(() => {
+      navigate(`/user/${value}`);
+    }, 1000);
   };
 
   return (
@@ -28,8 +24,11 @@ const Serach = () => {
         Search for a github user and start browsing his repositories
       </h1>
       <SearchBar
-      style={{minWidth:"35vw"}}
-        onEnter={(value)=>{handleSubmit(value)}}
+        required
+        style={{ minWidth: "35vw" }}
+        onEnter={(value) => {
+          handleSubmit(value);
+        }}
         placeholder="Github username.."
       ></SearchBar>
     </div>

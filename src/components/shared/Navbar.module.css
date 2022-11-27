@@ -37,6 +37,10 @@
     pointer-events: auto;
 }
 
+.links {
+    display: flex;
+}
+
 .links a {
     margin-left: 20px;
     font-weight: 700;
@@ -106,5 +110,8 @@
     }
     .navbar .title {
         color: var( --color-text);
+    }
+    .links {
+        display: none;
     }
 }
