@@ -3,26 +3,41 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 import RepoModel from "../../models/RepoModel";
 import CardModal from "./CardModal";
+import { useState } from "react";
 interface CardProps {
   repo: RepoModel;
 }
 const Card = ({ repo }: CardProps) => {
   var r: any = document.querySelector(":root");
   r.style.setProperty("--deg", Math.floor(Math.random() * 10) + "deg");
+  const [modal, setModal] = useState(false);
+  const close = () => {
+    setModal(false);
+  };
   return (
     <>
-      <CardModal></CardModal>
-      <div className={classes.card}>
-        <div className={classes.cardTitle}>
-          <FontAwesomeIcon className={classes.icon} icon={faBookmark} />
-          <h2 className="heading-2">{repo.name}</h2>
+      {modal && <CardModal close={close} repo={repo}></CardModal>}
+      <div
+        className={classes.card}
+        onClick={() => {
+          setModal(true);
+        }}
+      >
+        <div>
+          <div className={classes.cardTitle}>
+            <FontAwesomeIcon className={classes.icon} icon={faBookmark} />
+            <div>
+              <a href={repo.html_url}>
+                <h2 className="heading-2">{repo.name}</h2>
+              </a>
+              <a href={repo.owner.html_url}>
+                <h2>{repo.owner.login}</h2>
+              </a>
+            </div>
+          </div>
         </div>
-
         <p className={classes.description}>{repo.description}</p>
-        <div className={classes.tags + " row"}>
-          <p>{repo.visibility}</p>
-          <p>{repo.language}</p>
-        </div>
+        <p>{repo.language}</p>
       </div>
     </>
   );

@@ -16,7 +16,11 @@ const Layout = (props: LayoutProps) => {
     setLightMode(!lightMode);
   };
   return (
-    <div className={`${lightMode ? classes.light : classes.dark}`}>
+    <div
+      className={`${classes.layout} ${
+        lightMode ? classes.light : classes.dark
+      }`}
+    >
       <Navbar />
       <div className={classes.content}> {props.children}</div>
       <ModeSwitch changeMode={changeMode} lightMode={lightMode} />

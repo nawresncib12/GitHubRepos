@@ -9,7 +9,6 @@ export default interface RepoModel {
   full_name: string;
   id: number;
   language: string;
-  license: string;
   name: string;
   open_issues: number;
   owner: OwnerModel;

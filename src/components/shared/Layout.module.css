@@ -1,18 +1,22 @@
+.layout {
+    --color-primary: #4078C0;
+    --color-glass: hsla(180, 1%, 47%, 0.141);
+    --color-green: #549d62;
+}
+
 .dark {
     --color-back: #1E1E1E;
-    --color-primary: #4078C0;
     --color-text: #fff;
-    --color-opposite: #1E1E1E;
     --color-gray: #4A4B4B;
+    --color-note: #F1F2F2;
     color: #fff;
 }
 
 .light {
     --color-text: #1E1E1E;
     --color-back: #fff;
-    --color-primary: #4078C0;
-    --color-opposite: #fff;
     --color-gray: #F1F2F2;
+    --color-note: #4A4B4B;
     color: #1E1E1E;
 }
 

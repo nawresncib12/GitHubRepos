@@ -6,6 +6,7 @@ a {
 
 p {
     text-overflow: ellipsis;
+    color: var(--color-note);
 }
 
 .row {
@@ -27,6 +28,10 @@ p {
 .flex-center {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.align-center {
     align-items: center;
 }
 
@@ -69,6 +74,10 @@ p {
 
 .description {
     color: var(--color-gray);
+}
+
+.bold {
+    font-weight: 700;
 }
 
 @media only screen and (max-width: 1000px) {
