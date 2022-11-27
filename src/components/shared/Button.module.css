@@ -11,6 +11,11 @@
     animation: tilt 0.5s 2;
 }
 
+.btn:hover.noHover {
+    cursor: pointer;
+    animation: none;
+}
+
 .btn:focus {
     cursor: pointer;
     animation: none;

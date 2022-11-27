@@ -1,46 +1,37 @@
 import classes from "./Search.module.css";
 import RotatingImages from "../components/Search/RotatingImages";
-import Input from "../components/shared/Input";
-import Button from "../components/shared/Button";
+import SearchBar from "../components/shared/SearchBar";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 const Serach = () => {
   const navigate = useNavigate();
-  const [user, setUser] = useState("");
   const [fade, setFade] = useState(false);
-  const handleInput = (value: string) => {
-    setUser(value);
-  };
-  const handleSubmit = () => {
-    if (!user) {
-      alert("please fill in user name");
+
+  const handleSubmit = (value: any) => {
+    if (!value) {
+      toast.error("Please fill in user name");
     } else {
       setFade(true);
       setTimeout(() => {
-        navigate(`/user/${user}`);
+        navigate(`/user/${value}`);
       }, 1000);
     }
   };
 
   return (
     <div className={classes.search}>
+      <ToastContainer />
       <RotatingImages fade={fade}></RotatingImages>
       <h1 className="heading-1 center-text">
-        Search for a github user and start browsing his Repositories
+        Search for a github user and start browsing his repositories
       </h1>
-      <Input
-        onEnter={handleSubmit}
-        onChange={(value) => {
-          handleInput(value);
-        }}
-        placeholder="Github Username"
-        minWidth="65%"
-      ></Input>
-      <Button
-        onClick={handleSubmit}
-        type="primary"
-        text="search"
-      ></Button>
+      <SearchBar
+      style={{minWidth:"35vw"}}
+        onEnter={(value)=>{handleSubmit(value)}}
+        placeholder="Github username.."
+      ></SearchBar>
     </div>
   );
 };

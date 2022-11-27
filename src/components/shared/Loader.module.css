@@ -1,0 +1,40 @@
+@import './Layout.module.css';
+.loader {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    max-width: 50vmin;
+    max-height: 50vmin;
+}
+
+.loader>div {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border: 8px solid var(--color-primary);
+    border-radius: 50%;
+    animation: loading 2s infinite;
+    border-color: var(--color-primary) transparent transparent transparent;
+}
+
+.loader div:first-child {
+    animation-delay: -0.4s;
+}
+
+.loader div:nth-child(2) {
+    animation-delay: -0.2s;
+}
+
+.loader div:nth-child(3) {
+    animation-delay: -0.1s;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
