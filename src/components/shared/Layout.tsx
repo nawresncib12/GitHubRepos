@@ -1,4 +1,4 @@
-import { ReactNode, useState } from "react";
+import { ReactNode } from "react";
 import Navbar from "./Navbar";
 import ModeSwitch from "./ModeSwitch";
 import classes from "./Layout.module.css";
@@ -7,11 +7,11 @@ interface LayoutProps {
   children: ReactNode;
 }
 const Layout = (props: LayoutProps) => {
-  const {mode, setMode} = useMode();
-  document.body.style.backgroundColor = mode == "light" ? "#fff" : "#1E1E1E";
+  const { mode, setMode } = useMode();
+  document.body.style.backgroundColor = mode === "light" ? "#fff" : "#1E1E1E";
 
   const changeMode = () => {
-    if (mode == "light") {
+    if (mode === "light") {
       localStorage.setItem("mode", "dark");
 
       setMode("dark");
@@ -24,7 +24,7 @@ const Layout = (props: LayoutProps) => {
   return (
     <div
       className={`${classes.layout} ${
-        mode == "light" ? classes.light : classes.dark
+        mode === "light" ? classes.light : classes.dark
       }`}
     >
       <Navbar />

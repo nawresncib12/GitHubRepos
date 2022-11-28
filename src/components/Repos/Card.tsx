@@ -17,7 +17,9 @@ const Card = ({ repo }: CardProps) => {
   return (
     <>
       {modal && <CardModal close={close} repo={repo}></CardModal>}
+
       <div
+        data-testid="card"
         className={classes.card}
         onClick={() => {
           setModal(true);

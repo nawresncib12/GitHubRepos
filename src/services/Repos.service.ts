@@ -14,5 +14,4 @@ class ReposService {
       });
   }
 }
-
 export default ReposService;

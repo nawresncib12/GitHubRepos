@@ -18,12 +18,12 @@ const Repos = () => {
         if (result.length) {
           setRepos(result);
         } else {
-          toast.info("The user you searched has no repositories");
-          navigate("/user");
+          toast.info("The user you searched has no public repositories");
+          navigate(-1);
         }
       } else {
         toast.info("User not found");
-        navigate("/user");
+        navigate(-1);
       }
     }
   };

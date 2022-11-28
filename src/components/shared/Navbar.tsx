@@ -3,6 +3,13 @@ import NavbarMenu from "./NavbarMenu";
 import { useState } from "react";
 const Navbar = () => {
   const [navbar, setNavbar] = useState("initial");
+  const openNavbar = () => {
+    setNavbar("loading");
+    document.body.style.overflow = "hidden";
+    setTimeout(() => {
+      setNavbar("open");
+    }, 400);
+  };
   return (
     <div
       className={`${classes.navContainer} ${
@@ -29,16 +36,7 @@ const Navbar = () => {
           </a>
         </div>
         <div className="sm">
-          <div
-            onClick={() => {
-              setNavbar("loading");
-              document.body.style.overflow = "hidden";
-              setTimeout(() => {
-                setNavbar("open");
-              }, 400);
-            }}
-            className={classes.outer}
-          >
+          <div onClick={openNavbar} className={classes.outer}>
             <div
               className={`${classes.inner}  ${
                 navbar === "loading" || navbar === "open"

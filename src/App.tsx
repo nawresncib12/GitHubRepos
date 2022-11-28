@@ -32,14 +32,6 @@ function App() {
             </Layout>
           }
         />
-        <Route
-          path="/test"
-          element={
-            <Layout>
-              <Repos />
-            </Layout>
-          }
-        />
       </Routes>
     </BrowserRouter>
   );

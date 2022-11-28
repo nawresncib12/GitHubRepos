@@ -1,6 +1,11 @@
 import classes from "./HeroDescription.module.css";
 import Button from "../shared/Button";
+import { useNavigate } from "react-router-dom";
 const HeroDescription = () => {
+  const navigate = useNavigate();
+  const toSearchUser = () => {
+    navigate("/user");
+  };
   return (
     <div className={classes.heroDescription + " flex-1"}>
       <h1>Lorem ipsum ipsum dolor adip consectetur</h1>
@@ -10,7 +15,7 @@ const HeroDescription = () => {
         elitlo rem
       </p>
       <div className="row mt-20">
-        <Button type="primary" text="Start now" />
+        <Button onClick={toSearchUser} type="primary" text="Start now" />
         <Button type="secondary" text="More" />
       </div>
     </div>

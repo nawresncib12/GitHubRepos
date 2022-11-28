@@ -20,8 +20,8 @@ const CardModal = ({ repo, close }: CardModalProps) => {
   return (
     <>
       <div onClick={close} className={classes.backdrop}>
-        <div className={classes.modal}>
-          <span onClick={close} className={classes.close}>
+        <div id="modal" className={classes.modal}>
+          <span  onClick={close} className={classes.close}>
             x
           </span>
           <div className={"row align-center"}>
@@ -40,7 +40,7 @@ const CardModal = ({ repo, close }: CardModalProps) => {
           <div className={classes.tags + " row "}>
             <p>{repo.visibility}</p>
             <p>
-              <span className="bold"> {formatDate(repo.pushed_at)}</span>
+              <span className="bold"> {formatDate(repo.created_at)}</span>
             </p>
             <p className="bold">{repo.language || "-"}</p>
           </div>
@@ -58,7 +58,7 @@ const CardModal = ({ repo, close }: CardModalProps) => {
               <span>{repo.stargazers_count} stars</span>
             </div>
           </div>
-          <p>{repo.description || "no description provided"}</p>
+          <p>{repo.description || "No description provided"}</p>
         </div>
       </div>
     </>

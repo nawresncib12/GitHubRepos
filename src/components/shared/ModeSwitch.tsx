@@ -1,14 +1,16 @@
 import classes from "./ModeSwitch.module.css";
-import Light from "../../assets/Light";
-import Night from "../../assets/Night";
-
-const ModeSwitch = ({ changeMode, mode }: any) => {
+interface ModeSwitchProps {
+  changeMode: () => void;
+  mode: string;
+}
+const ModeSwitch = ({ changeMode, mode }: ModeSwitchProps) => {
   return (
     <div
+      data-testid="switch"
       onClick={changeMode}
-      className={`${classes.mode}  ${mode == "light" ? "" : classes.dark}`}
+      className={`${classes.mode}  ${mode === "light" ? "" : classes.dark}`}
     >
-      {mode == "light" ? (
+      {mode === "light" ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
