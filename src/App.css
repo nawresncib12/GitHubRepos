@@ -1,4 +1,17 @@
 @import url("./components//shared//Layout.module.css");
+
+/*used default colors of light mode for storybook display*/
+
+:root {
+    --color-primary: #4078C0;
+    --color-glass: hsla(180, 1%, 47%, 0.141);
+    --color-green: #549d62;
+    --color-text: #1E1E1E;
+    --color-back: #fff;
+    --color-gray: #F1F2F2;
+    --color-note: #4A4B4B;
+}
+
 a {
     text-decoration: none;
     color: inherit;
