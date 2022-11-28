@@ -1,7 +1,10 @@
 import classes from "./HeroDescription.module.css";
 import Button from "../shared/Button";
 import { useNavigate } from "react-router-dom";
-const HeroDescription = () => {
+interface HeroDescriptionProps {
+  more: () => void;
+}
+const HeroDescription = ({ more }: HeroDescriptionProps) => {
   const navigate = useNavigate();
   const toSearchUser = () => {
     navigate("/user");
@@ -16,7 +19,7 @@ const HeroDescription = () => {
       </p>
       <div className="row mt-20">
         <Button onClick={toSearchUser} type="primary" text="Start now" />
-        <Button type="secondary" text="More" />
+        <Button onClick={more} type="secondary" text="More" />
       </div>
     </div>
   );

@@ -9,6 +9,7 @@
     left: 0;
     color: var(--color-text);
     pointer-events: none;
+    z-index: 2;
 }
 
 .navbar {

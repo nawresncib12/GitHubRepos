@@ -1,0 +1,40 @@
+.first {
+    background-color: aqua;
+    clip-path: polygon(100% 100%, 100% 0, 0 0, 0% 100%);
+    min-height: 100vh;
+    padding-top: 110px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.second {
+    background-color: rebeccapurple;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    min-height: 100vh;
+    padding-top: 110px;
+}
+
+.show {
+    animation: goUp 2s;
+    clip-path: polygon(0 0, 100% 0, 0 0, 0% 100%);
+}
+
+.scrollEffect>div {
+    width: 100vw;
+}
+
+@keyframes goUp {
+    0% {
+        clip-path: polygon(100% 100%, 100% 0, 0 0, 0% 100%);
+    }
+    50% {
+        clip-path: polygon(100% 0, 100% 0, 0 0, 0% 100%);
+    }
+    100% {
+        clip-path: polygon(0 0, 100% 0, 0 0, 0% 100%);
+    }
+}

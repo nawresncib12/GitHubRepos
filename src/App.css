@@ -1,4 +1,4 @@
-@import url("./components//shared//Layout.module.css");
+@import url("./components/shared/Layout.module.css");
 
 /*used default colors of light mode for storybook display*/
 
@@ -20,6 +20,7 @@ a {
 p {
     text-overflow: ellipsis;
     color: var(--color-note);
+    font-size: calc(15px + 0.5vmin);
 }
 
 .row {

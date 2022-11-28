@@ -1,0 +1,51 @@
+.second {
+    background-color: #dfeaf9;
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-height: calc(100vh - 120px);
+    z-index: 1;
+    pointer-events: none;
+    clip-path: polygon(100% 100%, 100% 0, 100% 100%, 0% 100%);
+    padding-top: 120px;
+    width: 100%;
+    display: flex;
+}
+
+.viewed {
+    animation: goUp 1s;
+    clip-path: polygon(100% 100%, 100% 0, 0 0, 0% 100%);
+}
+
+.stopped {
+    animation: goDown 1s;
+    clip-path: polygon(100% 100%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes goUp {
+    0% {
+        clip-path: polygon(100% 100%, 100% 0, 100% 100%, 0% 100%);
+    }
+    50% {
+        clip-path: polygon(100% 100%, 100% 0, 100% 0, 0% 100%);
+    }
+    100% {
+        clip-path: polygon(100% 100%, 100% 0, 0 0, 0% 100%);
+    }
+}
+
+@keyframes goDown {
+    0% {
+        clip-path: polygon(100% 100%, 100% 0, 0 0, 0% 100%);
+    }
+    50% {
+        clip-path: polygon(100% 100%, 100% 0, 100% 0, 0% 100%);
+    }
+    100% {
+        clip-path: polygon(100% 100%, 100% 0, 100% 100%, 0% 100%);
+    }
+}

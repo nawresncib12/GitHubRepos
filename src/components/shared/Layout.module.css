@@ -5,7 +5,7 @@
 }
 
 .dark {
-    --color-back: #1E1E1E;
+    --color-back: #2F2E41;
     --color-text: #fff;
     --color-gray: #4A4B4B;
     --color-note: #F1F2F2;
@@ -13,11 +13,11 @@
 }
 
 .light {
-    --color-text: #1E1E1E;
+    --color-text: #2F2E41;
     --color-back: #fff;
     --color-gray: #F1F2F2;
     --color-note: #4A4B4B;
-    color: #1E1E1E;
+    color: #2F2E41;
 }
 
 .content {
