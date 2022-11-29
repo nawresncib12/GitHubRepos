@@ -13,8 +13,9 @@ const HeroDescription = ({ more }: HeroDescriptionProps) => {
     <div className={classes.heroDescription + " flex-1"}>
       <h1>Fetch Github Repositories per user</h1>
       <p>
-        Fetch and filter by name public Github repositories of a specific user,
-        while Lorem ipsum dolor consectetur adipiscing elitlo rem ipsum dolor
+        Browsing github repositories has never been easier, Fetch and filter by
+        name public repositories of a specific user all while using a modern and
+        user friendly web application.
       </p>
       <div className="row mt-20">
         <Button onClick={toSearchUser} type="primary" text="Start now" />

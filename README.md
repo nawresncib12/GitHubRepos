@@ -2,14 +2,15 @@
   Github Repos
 </h1>
 <p align="center" style="font-size: 15px;">A web application that fetches and filters public github repositories of a specific user using his github username.</p>
-🔗 <a align="center" style="font-size: 15px;"href="https://github.com/nawresncib12"> Live Demo</a>
-<br/>
+🔗 <a align="center" style="font-size: 15px;"href="https://imaginative-caramel-9963f8.netlify.app/"> Live Demo</a>
+<br/><br/>
 
 ![Sample App Image](./public/screenshot.png)
 
 <hr/>
 
 ### 💻 Technologies Used:
+
 <br/>
 
 This application is written using :
@@ -19,6 +20,7 @@ This application is written using :
 <hr/>
 
 ### 👨‍💻 Installation and Setup Instructions :
+
 <br/>
 
 You will need node and npm installed globally on your machine.
@@ -72,4 +74,9 @@ Suggested features and fixes include:
 <hr/>
 
 ### ✨ Feedback:
+
 <br/>
+
+Working on this project was an enjoyable exercice.I got the chance to work on my own design and implement different animations all while maintaining a responsive, modern and easy to use interface.
+I also enjoyed working on the bonus tasks like testing and using storybook.
+

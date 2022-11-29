@@ -41,7 +41,7 @@
 }
 
 @media only screen and (max-height: 600px) {
-    .navbar span {
+    .navbar .link {
         zoom: 40%;
     }
 }
