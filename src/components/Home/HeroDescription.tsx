@@ -11,11 +11,10 @@ const HeroDescription = ({ more }: HeroDescriptionProps) => {
   };
   return (
     <div className={classes.heroDescription + " flex-1"}>
-      <h1>Lorem ipsum ipsum dolor adip consectetur</h1>
+      <h1>Fetch Github Repositories per user</h1>
       <p>
-        Lorem ipsum dolor consectetur adipiscing elitlo rem ipsum dolor
-        consectetur adipiscing elit Lorem ipsum dolor consectetur adipiscing
-        elitlo rem
+        Fetch and filter by name public Github repositories of a specific user,
+        while Lorem ipsum dolor consectetur adipiscing elitlo rem ipsum dolor
       </p>
       <div className="row mt-20">
         <Button onClick={toSearchUser} type="primary" text="Start now" />

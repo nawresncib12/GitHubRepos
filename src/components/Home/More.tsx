@@ -13,7 +13,7 @@ const More = ({ home }: MoreProps) => {
     <div className={classes.more}>
       <div className={classes.description}>
         <h1>More questions?</h1>
-        <p>Answers are just a message away.</p>
+        <p>Answers are just a message away1</p>
         <div className={classes.socials}>
           <IconTitle
             icon={faLinkedin}

@@ -23,6 +23,10 @@
     margin-top: 20px;
 }
 
+.more svg {
+    max-width: 90%;
+}
+
 @media only screen and (max-width: 1000px) {
     .more {
         max-width: 70vw;
