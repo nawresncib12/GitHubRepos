@@ -55,9 +55,10 @@ const Repos = () => {
       toast.info("No repositories found");
     }
   };
+  
   useEffect(() => {
     getRepos();
-  }, [getRepos]);
+  }, []); //eslint-disable-line
 
   return repos.length ? (
     <div>
