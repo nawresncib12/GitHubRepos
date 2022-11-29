@@ -20,10 +20,12 @@ const Navbar = () => {
     >
       {navbar === "open" && <NavbarMenu setNavbar={setNavbar}></NavbarMenu>}
       <div className={classes.navbar}>
-        <h1 className={classes.title}>
-          <div className={classes.background + " lg"}></div>
-          GitHub Repos
-        </h1>
+        <a href="/">
+          <h1 className={classes.title}>
+            <div className={classes.background + " lg"}></div>
+            GitHub Repos
+          </h1>
+        </a>
         <div className={classes.links}>
           <a className="underline" href="/">
             Home

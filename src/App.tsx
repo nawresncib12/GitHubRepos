@@ -4,6 +4,7 @@ import Search from "./pages/Search";
 import Home from "./pages/Home";
 import Layout from "./components/shared/Layout";
 import Repos from "./pages/Repos";
+import NotFound from "./pages/NotFound";
 function App() {
   return (
     <BrowserRouter>
@@ -30,6 +31,12 @@ function App() {
             <Layout>
               <Repos />
             </Layout>
+          }
+        />
+      <Route
+          path="*"
+          element={
+              <NotFound />
           }
         />
       </Routes>

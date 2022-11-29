@@ -14,10 +14,7 @@ const Home = () => {
   };
   const home = () => {
     window.scrollTo(0, 0);
-    setShown("initial");
-    setTimeout(() => {
-      setShown("initial");
-    }, 1000);
+    setShown("back");
   };
   return (
     <>
@@ -28,7 +25,11 @@ const Home = () => {
 
       <div
         className={`${classes.second} ${
-          shown != "initial" ? classes.viewed : classes.stopped
+          shown != "initial"
+            ? shown == "back"
+              ? classes.stopped
+              : classes.viewed
+            :  classes.hidden
         }`}
       >
         <More home={home}></More>

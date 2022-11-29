@@ -29,6 +29,7 @@ const SearchBar = ({
   };
   return (
     <div className={classes.searchBar}>
+      <div>
         <input
           style={style}
           onChange={(e) => {
@@ -50,6 +51,7 @@ const SearchBar = ({
         >
           <FontAwesomeIcon className={classes.icon} icon={faSearch} />
         </Button>
+      </div>
     </div>
   );
 };

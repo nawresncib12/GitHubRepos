@@ -8,6 +8,8 @@
     align-items: center;
     max-width: 700px;
     pointer-events: auto;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .description {
@@ -19,4 +21,11 @@
 
 .description .socials>div {
     margin-top: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .more {
+        max-width: 70vw;
+        flex-direction: column-reverse;
+    }
 }

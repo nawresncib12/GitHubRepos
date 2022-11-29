@@ -2,6 +2,7 @@ import RepoModel from "../../models/RepoModel";
 import classes from "./CardModal.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCodeFork, faEye, faStar } from "@fortawesome/free-solid-svg-icons";
+import IconTitle from "../shared/IconTitle";
 interface CardModalProps {
   repo: RepoModel;
   close: () => void;
@@ -21,7 +22,7 @@ const CardModal = ({ repo, close }: CardModalProps) => {
     <>
       <div onClick={close} className={classes.backdrop}>
         <div id="modal" className={classes.modal}>
-          <span  onClick={close} className={classes.close}>
+          <span onClick={close} className={classes.close}>
             x
           </span>
           <div className={"row align-center"}>
@@ -30,10 +31,10 @@ const CardModal = ({ repo, close }: CardModalProps) => {
             </div>
             <div className={classes.titles}>
               <a href={repo.html_url}>
-                <h2 className="heading-2">{repo.name}</h2>
+                <h2 className="heading-2 underline">{repo.name}</h2>
               </a>
               <a href={repo.owner.html_url}>
-                <h2>{repo.owner.login}</h2>
+                <h2 className="underline">{repo.owner.login}</h2>
               </a>
             </div>
           </div>
@@ -45,18 +46,15 @@ const CardModal = ({ repo, close }: CardModalProps) => {
             <p className="bold">{repo.language || "-"}</p>
           </div>
           <div className={classes.counts}>
-            <div>
-              <FontAwesomeIcon className={classes.icon} icon={faEye} />
-              <span>{repo.watchers_count} watchers</span>
-            </div>
-            <div>
-              <FontAwesomeIcon className={classes.icon} icon={faCodeFork} />
-              <span>{repo.forks_count} forks</span>
-            </div>
-            <div>
-              <FontAwesomeIcon className={classes.icon} icon={faStar} />
-              <span>{repo.stargazers_count} stars</span>
-            </div>
+            <IconTitle color="#4078C0" icon={faEye}>
+              {repo.watchers_count} watchers
+            </IconTitle>
+            <IconTitle color="#549d62" icon={faCodeFork}>
+              {repo.forks_count} forks
+            </IconTitle>
+            <IconTitle icon={faStar} color="#D5AB55">
+              {repo.stargazers_count} stars
+            </IconTitle>
           </div>
           <p>{repo.description || "No description provided"}</p>
         </div>

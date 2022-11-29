@@ -14,12 +14,6 @@
     }
 }
 
-@media screen and (max-height:450px) {
-    .rotatingImages {
-        display: none;
-    }
-}
-
 .rotatingImages {
     position: absolute;
     overflow: hidden;
@@ -28,6 +22,7 @@
     width: 100%;
     height: 100vh;
     z-index: -10;
+    animation: fade 0.5s;
 }
 
 .circle {
@@ -46,6 +41,17 @@
 .element.hide {
     opacity: 0;
     transform: translateY(50px);
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .pos1 {
@@ -222,5 +228,11 @@
     100% {
         top: calc(75%);
         left: calc(25% - var( --user-size));
+    }
+}
+
+@media screen and (max-height:450px) {
+    .rotatingImages {
+        display: none;
     }
 }
