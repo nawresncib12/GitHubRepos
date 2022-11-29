@@ -6,6 +6,11 @@
     flex-wrap: nowrap;
 }
 
+.searchBar>div {
+    display: flex;
+    align-items: baseline;
+}
+
 .input {
     margin: auto;
     border-radius: 15px 0 0 15px;

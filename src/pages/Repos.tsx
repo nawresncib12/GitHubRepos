@@ -18,11 +18,15 @@ const Repos = () => {
         if (result.length) {
           setRepos(result);
         } else {
-          toast.info("The user you searched has no public repositories");
+          setTimeout(() => {
+            toast.info("The user you searched has no public repositories");
+          }, 300);
           navigate(-1);
         }
       } else {
-        toast.info("User not found");
+        setTimeout(() => {
+          toast.info("User not found");
+        }, 300);
         navigate(-1);
       }
     }

@@ -1,4 +1,3 @@
-@import './Layout.module.css';
 .navContainer {
     display: flex;
     overflow: hidden;
@@ -29,6 +28,7 @@
     background: rgba(64, 120, 192, 0.6);
     border-radius: 50px;
     transform: rotate(21.01deg) translateX(-180px) translateY(-120px);
+    animation: navAppear 1s;
 }
 
 .navbar .title {
@@ -42,10 +42,11 @@
     display: flex;
 }
 
-.links a {
+.links span {
     margin-left: 20px;
     font-weight: 700;
     pointer-events: auto;
+    cursor: pointer;
 }
 
 .navbar .outer {
@@ -102,6 +103,15 @@
     }
     100% {
         transform: scale(1);
+    }
+}
+
+@keyframes navAppear {
+    0% {
+        transform: rotate(0deg) translateX(-400px) translateY(-250px);
+    }
+    100% {
+        transform: rotate(21.01deg) translateX(-180px) translateY(-120px);
     }
 }
 

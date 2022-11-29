@@ -46,15 +46,21 @@ const CardModal = ({ repo, close }: CardModalProps) => {
             <p className="bold">{repo.language || "-"}</p>
           </div>
           <div className={classes.counts}>
-            <IconTitle color="#4078C0" icon={faEye}>
-              {repo.watchers_count} watchers
-            </IconTitle>
-            <IconTitle color="#549d62" icon={faCodeFork}>
-              {repo.forks_count} forks
-            </IconTitle>
-            <IconTitle icon={faStar} color="#D5AB55">
-              {repo.stargazers_count} stars
-            </IconTitle>
+            <IconTitle
+              color="#4078C0"
+              icon={faEye}
+              text={`  ${repo.watchers_count} watchers`}
+            />
+            <IconTitle
+              color="#549d62"
+              icon={faCodeFork}
+              text={`${repo.forks_count} forks`}
+            />
+            <IconTitle
+              icon={faStar}
+              color="#D5AB55"
+              text={`${repo.stargazers_count} stars`}
+            />
           </div>
           <p>{repo.description || "No description provided"}</p>
         </div>

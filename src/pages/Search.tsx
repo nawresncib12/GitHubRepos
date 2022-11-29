@@ -9,7 +9,7 @@ const Serach = () => {
   const navigate = useNavigate();
   const [fade, setFade] = useState(false);
 
-  const handleSubmit = (value: any) => {
+  const handleSubmit = (value: string | undefined) => {
     setFade(true);
     setTimeout(() => {
       navigate(`/user/${value}`);

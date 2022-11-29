@@ -15,15 +15,23 @@ const More = ({ home }: MoreProps) => {
         <h1>More questions?</h1>
         <p>Answers are just a message away.</p>
         <div className={classes.socials}>
-          <IconTitle icon={faLinkedin} color="#0072b1" link>
-            linkedin.com/in/nawres-ncib/
-          </IconTitle>
-          <IconTitle icon={faGithub} color="#171515">
-            https://github.com/nawresncib12
-          </IconTitle>
-          <IconTitle icon={faEnvelope} color="#549d62" link>
-            ncibnawres04@gmail.com
-          </IconTitle>
+          <IconTitle
+            icon={faLinkedin}
+            color="#0072b1"
+            text="linkedin.com/in/nawres-ncib/"
+            link
+          />
+          <IconTitle
+            icon={faGithub}
+            color="#171515"
+            text="github.com/nawresncib12"
+            link
+          />
+          <IconTitle
+            icon={faEnvelope}
+            color="#549d62"
+            text="ncibnawres04@gmail.com"
+          />
         </div>
         <Button onClick={home} type="secondary" text="Home" />
       </div>

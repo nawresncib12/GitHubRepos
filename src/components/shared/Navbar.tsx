@@ -1,7 +1,9 @@
 import classes from "./Navbar.module.css";
 import NavbarMenu from "./NavbarMenu";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
+  const navigate = useNavigate();
   const [navbar, setNavbar] = useState("initial");
   const openNavbar = () => {
     setNavbar("loading");
@@ -9,6 +11,9 @@ const Navbar = () => {
     setTimeout(() => {
       setNavbar("open");
     }, 400);
+  };
+  const handleNavigate = (route: string) => {
+    navigate(route);
   };
   return (
     <div
@@ -27,15 +32,30 @@ const Navbar = () => {
           </h1>
         </a>
         <div className={classes.links}>
-          <a className="underline" href="/">
+          <span
+            onClick={() => {
+              handleNavigate("/");
+            }}
+            className="underline"
+          >
             Home
-          </a>
-          <a className="underline" href="/user">
+          </span>
+          <span
+            onClick={() => {
+              handleNavigate("/user");
+            }}
+            className="underline"
+          >
             Search
-          </a>
-          <a className="underline" href="/">
+          </span>
+          <span
+            onClick={() => {
+              handleNavigate("/");
+            }}
+            className="underline"
+          >
             Documentation
-          </a>
+          </span>
         </div>
         <div className="sm">
           <div onClick={openNavbar} className={classes.outer}>
