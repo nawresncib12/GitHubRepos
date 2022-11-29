@@ -1,8 +1,8 @@
+import classes from "./Home.module.css";
 import { useState } from "react";
 import HeroDescription from "../components/Home/HeroDescription";
 import HeroImage from "../components/Home/HeroImage";
 import More from "../components/Home/More";
-import classes from "./Home.module.css";
 const Home = () => {
   const [shown, setShown] = useState("initial");
   const more = () => {
@@ -18,18 +18,18 @@ const Home = () => {
   };
   return (
     <>
-      <div className={`${shown == "gone" && classes.hidden} grid-2 `}>
+      <div className={`${shown === "gone" && classes.hidden} grid-2 `}>
         <HeroDescription more={more}></HeroDescription>
         <HeroImage></HeroImage>
       </div>
 
       <div
         className={`${classes.second} ${
-          shown != "initial"
-            ? shown == "back"
+          shown !== "initial"
+            ? shown === "back"
               ? classes.stopped
               : classes.viewed
-            :  classes.hidden
+            : classes.hidden
         }`}
       >
         <More home={home}></More>

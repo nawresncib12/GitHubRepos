@@ -1,6 +1,5 @@
 import RepoModel from "../../models/RepoModel";
 import classes from "./CardModal.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCodeFork, faEye, faStar } from "@fortawesome/free-solid-svg-icons";
 import IconTitle from "../shared/IconTitle";
 interface CardModalProps {

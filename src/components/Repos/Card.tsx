@@ -12,17 +12,13 @@ const Card = ({ repo }: CardProps) => {
   const close = () => {
     setModal(false);
   };
+  const open = () => {
+    setModal(true);
+  };
   return (
     <>
       {modal && <CardModal close={close} repo={repo}></CardModal>}
-
-      <div
-        data-testid="card"
-        className={classes.card}
-        onClick={() => {
-          setModal(true);
-        }}
-      >
+      <div data-testid="card" className={classes.card} onClick={open}>
         <div>
           <div className={classes.cardTitle}>
             <FontAwesomeIcon className={classes.icon} icon={faBookmark} />
