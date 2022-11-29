@@ -11,7 +11,7 @@
     pointer-events: auto;
 }
 
-.navbar span {
+.navbar .link {
     opacity: 0;
     animation: show 0.3s linear forwards 0.3s;
     font-size: calc(40px + 1vmin);
@@ -21,11 +21,11 @@
     cursor: pointer;
 }
 
-.navbar span::after {
+.navbar .link::after {
     background: #fff;
 }
 
-.navbar span.close {
+.navbar .link.close {
     position: absolute;
     top: -10px;
     right: 30px;

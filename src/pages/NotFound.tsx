@@ -3,6 +3,9 @@ import Button from "../components/shared/Button";
 import { useNavigate } from "react-router-dom";
 const NotFound = () => {
   const navigate = useNavigate();
+  /**
+   * navigates to home page
+   */
   const backHome = () => {
     navigate("/");
   };

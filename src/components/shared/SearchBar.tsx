@@ -17,9 +17,17 @@ const SearchBar = ({
   style,
 }: SearchBarProps) => {
   const [value, setValue] = useState("");
+  /**
+   * tracks input value in state
+   */
   const handleChange = (entered: string) => {
     setValue(entered);
   };
+  /**
+   * handles search
+   * check if input is empty in while value is required
+   * if true fires toast error otherwise executes onEnter function
+   */
   const handleSearch = () => {
     if (!value && required) {
       toast.error("Please fill in search value");
@@ -36,6 +44,7 @@ const SearchBar = ({
             handleChange(e.target.value);
           }}
           onKeyDown={(e) => {
+            //executes on enter key press
             if (e.key === "Enter") {
               handleSearch();
             }

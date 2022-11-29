@@ -8,14 +8,17 @@ import { useNavigate } from "react-router-dom";
 const Serach = () => {
   const navigate = useNavigate();
   const [fade, setFade] = useState(false);
-
+  /**
+   * show fade animation for rotating images
+   * go to user route with value in params
+   * @param {string|undefined} value
+   */
   const handleSubmit = (value: string | undefined) => {
     setFade(true);
     setTimeout(() => {
       navigate(`/user/${value}`);
     }, 1000);
   };
-
   return (
     <div className={classes.search}>
       <ToastContainer />

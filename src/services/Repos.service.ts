@@ -1,5 +1,9 @@
 import axios from "axios";
 class ReposService {
+  /**
+   * get public repositories of specified github user
+   * @param {string} user
+   */
   public static async getReposByUser(user: string) {
     return await axios
       .get(`https://api.github.com/users/${user}/repos`, {})

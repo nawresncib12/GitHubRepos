@@ -8,16 +8,20 @@ interface LayoutProps {
 }
 const Layout = (props: LayoutProps) => {
   const { mode, setMode } = useMode();
+  /**
+   * assign body background-color based on mode
+   */
   document.body.style.backgroundColor = mode === "light" ? "#fff" : "#1E1E1E";
-
+  /**
+   * stores mode in local storage to keep user preference on reload
+   * stores mode in context to be accessible by other components
+   */
   const changeMode = () => {
     if (mode === "light") {
       localStorage.setItem("mode", "dark");
-
       setMode("dark");
     } else {
       localStorage.setItem("mode", "light");
-
       setMode("light");
     }
   };

@@ -42,7 +42,8 @@
     display: flex;
 }
 
-.links span {
+.links span,
+.links a {
     margin-left: 20px;
     font-weight: 700;
     pointer-events: auto;

@@ -5,14 +5,28 @@ import HeroImage from "../components/Home/HeroImage";
 import More from "../components/Home/More";
 const Home = () => {
   const [shown, setShown] = useState("initial");
+  /**
+   * shows more section
+   */
   const more = () => {
+    // scroll to top to see the section from start
     window.scrollTo(0, 0);
-    setShown("loading");
+    /**
+     * give 1 second for animation execution
+     * remove home section
+     */
     setTimeout(() => {
       setShown("gone");
     }, 1000);
   };
+  /**
+   * shows home section
+   */
   const home = () => {
+    /**
+     * scroll to top to see the section from start
+     * remove more section
+     */
     window.scrollTo(0, 0);
     setShown("back");
   };

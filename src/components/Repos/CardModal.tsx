@@ -7,6 +7,11 @@ interface CardModalProps {
   close: () => void;
 }
 const CardModal = ({ repo, close }: CardModalProps) => {
+  /**
+   * formats date to DD-MM-YYYY
+   * @param {string} d
+   * @return {string}
+   */
   const formatDate = (d: string) => {
     var m = new Date(d);
     var dateString =

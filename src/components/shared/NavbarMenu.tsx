@@ -5,10 +5,19 @@ interface NavbarMenuProps {
 }
 const NavbarMenu = ({ setNavbar }: NavbarMenuProps) => {
   const navigate = useNavigate();
+  /**
+   * hide navbar menu and remake body scrollable
+   */
   const close = () => {
     setNavbar("closed");
     document.body.style.overflow = "auto";
   };
+  /**
+   * hide navbar menu
+   * remake body scrollable
+   * navigate to specified route within the web application after timeout for animation to run
+   * @param {string} route
+   */
   const handleNavigate = (route: string) => {
     setNavbar("closed");
     document.body.style.overflow = "auto";
@@ -18,24 +27,31 @@ const NavbarMenu = ({ setNavbar }: NavbarMenuProps) => {
   };
   return (
     <div className={classes.navbar}>
-      <span className={classes.close} onClick={close}>
+      <span className={classes.link + " " + classes.close} onClick={close}>
         x
       </span>
-      <span className="underline"
+      <span
+        className={classes.link + " underline"}
         onClick={() => {
           handleNavigate("/");
         }}
       >
         Home
       </span>
-      <span  className="underline"
+      <span
+        className={classes.link + " underline"}
         onClick={() => {
           handleNavigate("/user");
         }}
       >
         Search
       </span>
-      <span  className="underline">Documentation</span>
+      <a
+        href="https://github.com/nawresncib12/GitHubRepos"
+        className={classes.link + " underline"}
+      >
+        Documentation
+      </a>
     </div>
   );
 };
