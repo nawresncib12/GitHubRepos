@@ -33,7 +33,7 @@ const More = ({ home }: MoreProps) => {
             text="ncibnawres04@gmail.com"
           />
         </div>
-        <Button onClick={home} type="secondary" text="Home" />
+        <Button onClick={home} type="secondary" text="Back" />
       </div>
       <svg
         width="328"
