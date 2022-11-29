@@ -57,7 +57,7 @@ const Repos = () => {
   };
   useEffect(() => {
     getRepos();
-  }, []);
+  }, [getRepos]);
 
   return repos.length ? (
     <div>
